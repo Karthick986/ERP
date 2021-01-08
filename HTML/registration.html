@@ -1,0 +1,119 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: rgb(255, 255, 255);  
+  margin-left: 25%;
+  margin-right: 25%;
+}  
+.container {  
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 50px;  
+  background-color: rgb(255, 255, 255);  
+}  
+  
+input[type=text], input[type=password], textarea {   
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+
+.widthtext {   
+  padding: 15px;  
+  width: 100%;
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+} 
+
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: rgb(255, 247, 232);  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0; 
+            width: 50%; 
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #0099ff;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  font-size: 15px;
+  width: 50%;
+  font-family: monospace;
+  border: none;  
+  border-radius: 25px;
+  cursor: pointer;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 10;  
+}  
+
+</style>  
+</head>  
+<body>  
+<form>
+    
+<label> 
+       
+  <center>  <h1>Customer Registration Form</h1> </center>  
+  <hr>  
+  <div>
+  <label> Firstname : 
+<input type="text" class="widthtext" name="firstname" placeholder= "Firstname" required />  
+Lastname:   
+<input type="text" class="widthtext" name="lastname" placeholder="Lastname" required />   
+</label> 
+</div>
+<div>    
+
+Gender :
+</label padding="10px" margin="10px" required><br>  
+<input type="radio" value="Male" name="gender"> Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other 
+</label>
+</div>  
+<br>
+
+Phone :  
+</label>  
+<input type="text" name="country code" placeholder="Country Code" value="+91" size="3"/>   
+<input type="text" name="phone" placeholder="Phone no." size="10" required>   <br>
+
+Current Address :  
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+</textarea>  <br>
+
+ <label for="email"><b>Email</b></label>  <br>
+ <input size="50" type="text" placeholder="Enter Email" name="email" required>  <br>
+    
+<center><button type="submit" class="registerbtn">Register</button></center>
+</form>  
+</body>  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.2/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</html>  
+    
+
+    

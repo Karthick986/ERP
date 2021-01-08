@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Dashboard</title>
+
+<link rel="shortcut icon" href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/my-assets/image/logo/f39c647ac102546b8dfda13edc2b2594.png" type="image/x-icon">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/dist/img/ico/apple-touch-icon-57-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/dist/img/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/dist/img/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/dist/img/ico/apple-touch-icon-144-precomposed.png">
+
+
+<link href="D:\ERP\CSS\1.css" rel="stylesheet" type="text/css" />
+
+<link href="D:\ERP\CSS\bootsrap.css" rel="stylesheet" type="text/css" />
+
+<link href="D:\ERP\CSS\awesome.css" rel="stylesheet" type="text/css" />
+
+<link href="D:\ERP\CSS\TimePicker.css" rel="stylesheet" type="text/css" />
+<link href="D:\ERP\CSS\Wickedpicker.css" rel="stylesheet" type="text/css" />
+
+<link href="D:\ERP\CSS\select2.css" rel="stylesheet" type="text/css" />
+
+<link href="D:\ERP\CSS\DataTables.css" rel="stylesheet" type="text/css" />
+
+<link href="D:\ERP\CSS\Stroke.css" rel="stylesheet" type="text/css" />
+
+<link href="D:\ERP\CSS\Icons.css" rel="stylesheet" type="text/css" />
+
+<link href="D:\ERP\CSS\Toastr.css" rel=stylesheet type="text/css" />
+<link href="D:\ERP\CSS\Toggle.css" rel="stylesheet" type="text/css" />
+
+<link href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+<link href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/jquery-3.4.1.min.js?v=3.4.1" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/wickedpicker.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/jquery.validate.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+</head>
+<body class="hold-transition sidebar-mini">
+
+<div class="page-loader-wrapper">
+<div class="loader">
+<div class="preloader">
+<div class="spinner-layer pl-green">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div>
+<div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+</div>
+<p>Please wait...</p>
+</div>
+</div>
+
+<div class="se-pre-con"></div>
+
+<div class="wrapper">
+<header class="main-header">
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/" class="logo"> 
+<span class="logo-mini">
+
+<img src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/my-assets/image/logo/f39c647ac102546b8dfda13edc2b2594.png" alt="">
+</span>
+<span class="logo-lg">
+
+<img src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/./my-assets/image/logo/056f93c908b81bb71a5046d31466598d.png" alt="">
+</span>
+</a>
+
+<nav class="navbar navbar-static-top text-center">
+<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> 
+<span class="sr-only">Toggle navigation</span>
+<span class="pe-7s-keypad"></span>
+</a>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cinvoice" class="btn btn-success btn-outline"><i class="fa fa-balance-scale"></i> Sale</a>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/customer_receive" class="btn btn-success btn-outline"><i class="fa fa-money"></i> Customer Receive</a>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/supplier_payment" class="btn btn-success btn-outline"><i class="fa fa-money" aria-hidden="true"></i> Supplier Payment</a>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpurchase" class="btn btn-success btn-outline"><i class="ti-shopping-cart"></i> Purchase</a>
+<div class="navbar-custom-menu">
+<ul class="nav navbar-nav">
+<li class="dropdown notifications-menu">
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Creport/out_of_stock">
+<i class="pe-7s-attention" title="Out Of Stock"></i>
+<span class="label label-danger">1</span>
+</a>
+</li>
+
+<li class="dropdown dropdown-user">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="pe-7s-settings"></i></a>
+<ul class="dropdown-menu">
+<li><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/edit_profile"><i class="pe-7s-users"></i>User Profile</a></li>
+<li><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/change_password_form"><i class="pe-7s-settings"></i>Change Password</a></li>
+<li><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/logout"><i class="pe-7s-key"></i>Logout</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<aside class="main-sidebar">
+
+<div class="sidebar">
+
+<div class="user-panel text-center">
+<div class="image">
+<img src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/dist/img/profile_picture/profile.jpg" class="img-circle" alt="User Image">
+</div>
+<div class="info">
+<p>Admin User</p>
+<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+</div>
+</div>
+
+<ul class="sidebar-menu">
+<li class="active">
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/"><i class="ti-dashboard"></i> <span>Dashboard</span>
+<span class="pull-right-container">
+<span class="label label-success pull-right"></span>
+</span>
+</a>
+</li>
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-balance-scale"></i><span>Sale</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cinvoice">New Sale</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cinvoice/manage_invoice">Manage Sale</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cinvoice/pos_invoice">POS Sale</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cinvoice/gui_pos">GUI POS</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-handshake-o"></i><span>Customer</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Ccustomer">Add Customer</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Ccustomer/manage_customer">Manage Customer</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Ccustomer/customer_ledger_report">Customer Ledger</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Ccustomer/credit_customer">Credit Customer</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Ccustomer/paid_customer">Paid Customer</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Ccustomer/customer_advance">Customer Advance</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-bag"></i><span>Product</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Ccategory">Category</a></li>
+
+
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cunit">Unit</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cproduct">Add Product</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cproduct/add_product_csv">Import product (CSV)</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cproduct/manage_product">Manage Product</a></li>
+</ul>
+</li>
+
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-user"></i><span>Supplier</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csupplier">Add Supplier</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csupplier/manage_supplier">Manage Supplier</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csupplier/supplier_ledger_report">Supplier Ledger</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csupplier/supplier_advance">Supplier Advance</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-shopping-cart"></i><span>Purchase</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpurchase">Add Purchase</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpurchase/manage_purchase">Manage Purchase</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-book"></i><span>Quotation</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cquotation">Add Quotation</a></li>
+<li><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cquotation/manage_quotation">Manage Quotation</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-bar-chart"></i><span>Stock</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Creport">Stock Report</a></li>
+</ul>
+</li>
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-retweet" aria-hidden="true"></i><span>Return</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cretrun_m">Return</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cretrun_m/return_list">Stock Return List</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cretrun_m/supplier_return_list">Supplier Return List</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cretrun_m/wastage_return_list">Wastage Return List</a></li>
+</ul>
+</li>
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-book"></i><span>Report</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/closing">Closing</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/closing_report">Closing Report</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/all_report">Todays Report</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/todays_customer_receipt">Todays Customer Receipt</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/todays_sales_report">Sales Report</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/user_sales_report">User Wise Sales Report</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/retrieve_dateWise_DueReports">Due Report</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/retrieve_dateWise_Shippingcost">Shipping Cost Report</a></li>
+<li><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/todays_purchase_report">Purchase Report</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/purchase_report_category_wise">Purchase Report (Category wise)</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/product_sales_reports_date_wise">Sales Report (Product Wise)</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/sales_report_category_wise">Sales Report (Category wise)</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/sales_return">Sales Return</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/supplier_return">Supplier Return</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/retrieve_dateWise_tax">Tax Report</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/total_profit_report">Profit Report (Sale Wise)</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-money"></i><span>Accounts</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/show_tree">Chart of Account</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/supplier_payment">Supplier Payment</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/customer_receive">Customer Receive</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/cash_adjustment">Cash Adjustment</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/debit_voucher">Debit Voucher</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/credit_voucher">Credit Voucher</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/contra_voucher">Contra Voucher</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/journal_voucher">Journal Voucher</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/aprove_v">Vouchar Approval</a></li>
+<li class="treeview  "><a href="">Report <span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/cash_book">Cash Book</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/inventory_ledger">Inventory Ledger</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/bank_book">Bank Book</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/general_ledger">General Ledger</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/trial_balance">Trial Balance</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/profit_loss_report">Profit Loss</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/cash_flow_report">Cash Flow</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/accounts/coa_print">Coa Print</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-briefcase"></i><span>Bank</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/index">Add New Bank</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/bank_list">Manage Bank</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/bank_transaction">Bank Transaction</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/bank_ledger">Bank Ledger</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-money"></i><span>Tax</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Caccounts/tax_settings">Tax Settings</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Caccounts/add_incometax">Add Income Tax</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Caccounts/manage_income_tax">Manage Income Tax</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Caccounts/tax_report">Tax Report</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Caccounts/invoice_wise_tax_report">Invoice Wise Tax Report</a></li>
+</ul>
+</li>
+
+ 
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-users"></i><span>Human Resource</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-users"></i><span>HRM</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Chrm/add_designation">Add Designation</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Chrm/manage_designation">Manage Designation</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Chrm/add_employee">Add Employee</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Chrm/manage_employee">Manage Employee</a></li>
+</ul>
+</li>
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-clock-o"></i><span>Attendance</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cattendance/add_attendance">Attendance</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cattendance/manage_attendance">Manage Attendance</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cattendance/attendance_report">Attendance Report</a></li>
+</ul>
+</li>
+
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-paypal"></i><span>Payroll</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpayroll/Salarybenificial">
+Add Benefits</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpayroll/manage_benefits">Manage Benefits</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpayroll/salary_setup_form">Add Salary Setup</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpayroll/manage_salary_setup">Manage Salary Setup</a></li>
+
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpayroll/salary_generate_form">Salary Generate</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpayroll/manage_salary_generate">Manage Salary Generate</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cpayroll/salary_payment">Salary Payment</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-credit-card"></i><span>Expense</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cexpense/add_expense_item">Add Expense Item</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cexpense/manage_expense_item">Manage Expense Item</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cexpense/add_expense">Add Expense</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cexpense/manage_expense">Manage Expense</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cexpense/expense_statement_form">Expense Statement</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-university" aria-hidden="true"></i>
+<span>Office Loan</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cloan/add_ofloan_person">Add Person</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cloan/add_office_loan">Add Loan</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cloan/add_loan_payment">Add Payment</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cloan/manage_ofln_person">Manage Person</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-user-circle" aria-hidden="true"></i>
+<span>Personal Loan</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/add_person">Add Person</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/add_loan">Add Loan</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/add_payment">Add Payment</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/manage_person">Manage Loan</a></li>
+</ul>
+</li>
+
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-asl-interpreting"></i><span>Service</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cservice">Add Service</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cservice/manage_service">Manage Service</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cservice/service_invoice_form">Service Invoice</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cservice/manage_service_invoice">Manage Service Invoice</a></li>
+</ul>
+</li>
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-layout-grid2"></i><span>Commission</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csettings/commission">Generate Commssion</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-settings"></i><span>Settings</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-settings"></i> <span>Software Settings</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Company_setup/manage_company">Manage Company</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/User">Add User</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/User/manage_user">Manage Users </a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Language">Language </a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Currency">Currency </a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cweb_setting">Setting </a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cweb_setting/mail_setting">Mail Setting </a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cweb_setting/app_setting">App Settings </a></li>
+</ul>
+</li>
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-key"></i> <span>Role Permission</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Permission/add_role">Add Role</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Permission/role_list">Role List</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Permission/user_assign">User Assign Role</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="fa fa-comments"></i> <span>SMS</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csms/configure">SMS Configure</a></li>
+</ul>
+</li>
+
+
+<li class="treeview  ">
+<a href="#">
+<i class="ti-reload"></i> <span>Data Synchronizer</span>
+<span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+</a>
+<ul class="treeview-menu">
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Backup_restore/restore_form">Restore</a></li>
+<li class="treeview  "><a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Backup_restore/import_form">Import</a></li>
+<li class="treeview  "><a onclick="if (!window.__cfRLUnblockHandlers) return false; alert('You Are In Demo Mode')" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">Back Up</a></li>
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</div> 
+</aside>
+
+<div class="content-wrapper">
+
+<section class="content-header">
+<div class="header-icon">
+<i class="pe-7s-world"></i>
+</div>
+<div class="header-title">
+<h1>Dashboard</h1>
+<small>Home</small>
+<ol class="breadcrumb">
+<li><a href="#"><i class="pe-7s-home"></i> Home</a></li>
+<li class="active">Dashboard</li>
+</ol>
+</div>
+</section>
+
+<section class="content">
+
+
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+<div class="small-box bg-green whitecolor">
+<div class="inner">
+<h4><span class="count-number">9</span></h4>
+<p>Total Customer</p>
+</div>
+<div class="icon">
+<i class="fa fa-users"></i>
+</div>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Ccustomer/manage_customer" class="small-box-footer">Total Customer</a>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+<div class="small-box bg-pase whitecolor">
+<div class="inner">
+<h4><span class="count-number">10</span></h4>
+<p>Total Product</p>
+</div>
+<div class="icon">
+<i class="fa fa-shopping-bag"></i>
+</div>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cproduct/manage_product" class="small-box-footer">Total Product</a>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+<div class="small-box bg-bringal whitecolor">
+<div class="inner">
+<h4><span class="count-number">9</span></h4>
+<p>Total Supplier</p>
+</div>
+<div class="icon">
+<i class="fa fa-user"></i>
+</div>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Csupplier/manage_supplier" class="small-box-footer">Total Supplier </a>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+<div class="small-box bg-darkgreen whitecolor">
+<div class="inner">
+<h4><span class="count-number">9</span> </h4>
+<p>Total Sale</p>
+</div>
+<div class="icon">
+<i class="fa fa-money"></i>
+</div>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Cinvoice/manage_invoice" class="small-box-footer">Total Sale </a>
+</div>
+</div>
+</div>
+<hr>
+<div class="row">
+
+<div class="col-sm-12 col-md-7">
+<div class="panel panel-bd">
+<div class="panel-heading">
+<div class="panel-title">
+<h4 class="best-sale-title"> Best Sale Product</h4>
+<a href="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/Admin_dashboard/see_all_best_sales" class="btn btn-success text-white best-sale-seeall">See All</a>
+</div>
+</div>
+<div class="panel-body">
+<canvas id="lineChart" height="160"></canvas>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-5">
+<div class="panel panel-bd">
+<div class="panel-heading">
+<div class="panel-title">
+<form action="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/" name="form1" id="form1" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_test_name" value="d78e9458f3628f6dfc092cedc3ef0388" />
+ <div class="form-group row">
+<div class="col-sm-8 marginpadding-right0">
+<input type="text" class="form-control " value="January 2021" name="alldata" id="alldata"></div>
+<div class="col-sm-2 marginpaddingleft0">
+<button type="submit" name="btnSearch" class="btn filterbutton"><i class="fa fa-search"></i> Filter</button>
+</div>
+</div>
+</form> </div>
+<div class="panel-body">
+<div id="chartContainer" class="piechartcontainer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="panel panel-bd">
+<div class="panel-heading">
+<div class="panel-title">
+<h4 class="charttitle"></h4>
+</div>
+<div class="panel-body">
+<canvas id="yearlyreport" width="600" height="350"></canvas>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="panel panel-bd lobidisable">
+<div class="panel-heading">
+<div class="panel-title">
+<h4>Todays Overview</h4>
+</div>
+</div>
+<div class="panel-body">
+<div class="message_inner">
+<div class="message_widgets">
+<table class="table table-bordered table-striped table-hover">
+<tr>
+<th>Todays Report</th>
+<th>TK</th>
+</tr>
+<tr>
+<th>Total Sales</th>
+<td>$ 0.00</td>
+</tr>
+<tr>
+<th>Total Purchase</th>
+<td>$ 0.00</td>
+</tr>
+</table>
+<table class="table table-bordered table-striped table-hover">
+<tr>
+<th>Last Sales</th>
+<th>TK</th>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-sm-12 col-md-12">
+<div class="panel panel-bd">
+<div class="panel-heading">
+<div class="panel-title">
+<h4 class="charttitle"> Todays Sales Report</h4>
+</div>
+</div>
+<div class="panel-body">
+<div class="table-responsive todayssaletitle">
+<table class="table table-bordered table-striped table-hover">
+<thead>
+<tr>
+ <th>SL.</th>
+<th>Customer Name</th>
+<th>Invoice No</th>
+<th>Total Amount</th>
+<th>Paid Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="text-center" colspan="5">Record not found</th>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="3" align="right">&nbsp;<b>Total:</b></td>
+<td class="text-right">
+$ 0.00 </td>
+<td class="text-right">
+$ 0.00 </td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input type="hidden" id="currency" value="$" name="">
+<input type="hidden" id="totalsalep" value="" name="">
+<input type="hidden" id="totalplurchasep" value="1" name="">
+<input type="hidden" id="totalexpensep" value="0" name="">
+<input type="hidden" id="totalemployeesalaryp" value="0" name="">
+<input type="hidden" id="totalservicep" value="0" name="">
+<input type="hidden" id="month" value="January,February,March,April,May,June,July,August,September,October,November,December," name="">
+<input type="hidden" id="tlvmonthsale" value=",,,,,,,,,,,," name="">
+<input type="hidden" id="tlvmonthpurchase" value=",,,,,,,,,,,," name="">
+<input type="hidden" id="salspurhcaselabel" value="Sales And Purchase Report Summary- 2021" name="">
+<input type="hidden" id="bestsalelabel" value='Product_3, Product_8, Product_6, Product_5, Product_2, Printer, Keyboard, Product_7, Product_1, ' name="">
+<input type="hidden" id="bestsaledata" value='50.00, 47.00, 29.00, 25.00, 23.00, 15.00, 15.00, 8.00, 1.00, ' name="">
+<input type="hidden" value='60' name="" id="bestsalemax">
+</section> 
+</div> 
+
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/Chart.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/canvasjs.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/dashboard.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<footer class="main-footer">
+<strong>
+CopyrightÃƒâ€šÃ‚Â© 2018-2019 Bdtask. All rights reserved. </strong><i class="fa fa-heart color-green"></i>
+<input type="hidden" name="csrf_test_name" id="csrf_test_name" value="d78e9458f3628f6dfc092cedc3ef0388">
+<input type="hidden" name="base_url" id="base_url" value="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/">
+</footer>
+
+
+<div class="modal fade-scale" id="calculator" role="dialog">
+<div class="modal-dialog" id="calculatorcontent">
+
+<div class="modal-content">
+<div class="modal-body">
+<div class="calcontainer">
+<div class="screen">
+<h1 id="mainScreen">0</h1>
+</div>
+<table>
+<tr>
+<td><button value="7" id="7" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(7)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">7</button></td>
+<td><button value="8" id="8" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(8)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">8</button></td>
+<td><button value="9" id="9" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(9)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">9</button></td>
+<td><button onclick="if (!window.__cfRLUnblockHandlers) return false; DeleteLastSymbol()" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">CE</button></td>
+</tr>
+<tr>
+<td><button value="4" id="4" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(4)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">4</button></td>
+<td><button value="5" id="5" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(5)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">5</button></td>
+<td><button value="6" id="6" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(6)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">6</button></td>
+<td><button value="/" id="104" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(104)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">/</button></td>
+</tr>
+<tr>
+<td><button value="1" id="1" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(1)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">1</button></td>
+<td><button value="2" id="2" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(2)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">2</button></td>
+<td><button value="3" id="3" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(3)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">3</button></td>
+<td><button value="*" id="103" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(103)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">*</button></td>
+</tr>
+<tr>
+<td><button value="0" id="0" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(0)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">0</button></td>
+<td><button value="." id="128" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(128)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">.</button></td>
+<td><button value="-" id="102" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(102)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">-</button></td>
+<td><button value="+" id="101" onclick="if (!window.__cfRLUnblockHandlers) return false; InputSymbol(101)" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">+</button></td>
+</tr>
+<tr>
+<td colspan="2"><button onclick="if (!window.__cfRLUnblockHandlers) return false; ClearScreen()" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">C</button></td>
+<td colspan="1"><button onclick="if (!window.__cfRLUnblockHandlers) return false; CalculateTotal()" data-cf-modified-0e3ff44ce9cc8e47297265ba-="">=</button></td>
+<td colspan="1"><button data-dismiss="modal" class="btn-danger"><i class="fa fa-power-off"></i></button></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/jquery-ui.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/bootstrap.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/pace.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/jquery.slimscroll.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/jquery-ui-timepicker-addon.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/select2.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/Chart.min.js?v=2.5" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/datatables/dataTables.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/tableHeadFixer.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/frame.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/bootstrap-toggle.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/plugins/toastr/toastr.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/sweetalert/sweetalert.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/custom.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+
+<script src="https://saleserpnew.bdtask.com/saleserp_v9.6_demo/assets/js/jstree.min.js" type="0e3ff44ce9cc8e47297265ba-text/javascript"></script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="0e3ff44ce9cc8e47297265ba-|49" defer=""></script></body>
+</html>
